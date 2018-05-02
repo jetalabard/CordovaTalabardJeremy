@@ -1,0 +1,26 @@
+<ion-view view-title="Loisirs" class="fond" >
+    <ion-content class="has-header" >
+        <ion-list ng-controller="HobieCtrl" ng-init="getHobies();">
+            <div class="card" ng-repeat="hobie in hobies" >
+                <div class="item item-divider">
+                    <h2>{{hobie.title}}</h2>
+                    <h3>{{hobie.subtitle}}</h3>
+                    <p>{{hobie.date}}</p>
+                </div>
+                <div class="item item-text-wrap" style="text-align: center;">
+                    <img ng-src="{{hobie.photo}}" style="width:100%"/>
+                    <p style="text-align: justify;text-justify: inter-word;">
+                        {{hobie.resume}}
+                    </p>
+                    <br>
+                    <p>
+                        <button class="button button-energized" ng-repeat="link in hobie.links" style="margin: 10px;" ng-click="clickButton(link);" >
+                            <i class="icon ion-ios-cloud-download" ></i>
+                            {{link.libl}}
+                        </button>
+                    <p>
+                </div>
+            </div>
+        </ion-list>
+    </ion-content>
+</ion-view>

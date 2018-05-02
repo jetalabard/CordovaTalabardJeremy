@@ -1,0 +1,12 @@
+<ion-view view-title="Curriculum Vitae" class="fond" ng-controller="CVCtrl" ng-init="getCV();">
+    <ion-content class="has-header" >
+        <br><br><br><br><br><br>
+        <div class="buttons" style="text-align: center;">
+            <h3>Cliquez pour télécharger mon Curriculum Vitae</h3>
+            <button class="button button-energized" ng-click="clickButtonCv(cv.link,cv.name)">
+                <i class="icon ion-ios-cloud-download" ></i>
+                {{cv.libl}}
+            </button>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,62 @@
+<ion-side-menus enable-menu-with-back-views="false">
+    <ion-side-menu-content>
+        <ion-nav-bar class="bar-assertive" align-title="left">
+            <ion-nav-back-button>
+            </ion-nav-back-button>
+            <ion-nav-buttons side="right">
+                <button class="button button-icon button-clear ion-navicon" menu-toggle="right">
+                </button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+        <ion-nav-view name="menuContent" ></ion-nav-view>
+    </ion-side-menu-content>
+
+    <ion-side-menu side="right" ng-controller="HomeCtrl" ng-init="getDescription();">
+        <ion-header-bar class="bar-profile bar-assertive">
+            <div class="profile">
+                <img class="profile-picture"ng-src="{{photo}}" />
+                <h3 class="name">{{description.name}}</h3>
+            </div>
+        </ion-header-bar>
+        <ion-content>
+            <ion-list>
+                <ion-item menu-close href="#/app/home" >
+                    <i class="ion-home" style="padding: 10px;"></i>
+                    Accueil
+                </ion-item>
+                <ion-item menu-close href="#/app/cv">
+                    <i class="ion-clipboard" style="padding: 10px;"></i>
+                    Curriculum Vitae
+                </ion-item>
+                <ion-item menu-close href="#/app/trainings">
+                    <i class="ion-university" style="padding: 10px;"></i>
+                    Formations
+                </ion-item>
+                <ion-item menu-close href="#/app/skills">
+                    <i class="ion-thumbsup" style="padding: 10px;"></i>
+                    Compétences Informatiques
+                </ion-item> 
+                <ion-item menu-close href="#/app/project">
+                    <i class="ion-stats-bars" style="padding: 10px;"></i>
+                    Projets/Stages
+                </ion-item> 
+                <ion-item menu-close href="#/app/personalproject">
+                    <i class="ion-connection-bars" style="padding: 10px;"></i>
+                    Projets Personnels
+                </ion-item> 
+                <ion-item menu-close href="#/app/job">
+                    <i class="ion-star" style="padding: 10px;"></i>
+                    Emplois
+                </ion-item>
+                <ion-item menu-close href="#/app/hobies">
+                    <i class="ion-android-walk" style="padding: 10px;" ></i>
+                    Loisirs
+                </ion-item>
+                <ion-item menu-close href="#/app/contact">
+                    <i class="ion-email" style="padding: 10px;"></i>
+                    Contact
+                </ion-item>
+            </ion-list>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>

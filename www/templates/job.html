@@ -1,0 +1,26 @@
+<ion-view view-title="Emplois" class="fond" >
+    <ion-content class="has-header" >
+        <ion-list ng-controller="JobCtrl" ng-init="getJobs();">
+            <div class="card" ng-repeat="job in jobs" >
+                <div class="item item-divider">
+                    <h2>{{job.title}}</h2>
+                    <h3>{{job.subtitle}}</h3>
+                    <p>{{job.date}}</p>
+                </div>
+                <div class="item item-text-wrap" style="text-align: center;">
+                    <img ng-src="{{job.photo}}" style="width:100%"/>
+                    <p style="text-align: justify;text-justify: inter-word;">
+                        {{job.resume}}
+                    </p>
+                    <br>
+                    <p>
+                        <button class="button button-energized" ng-repeat="link in job.links" style="margin: 10px;" ng-click="clickButton(link);" >
+                            <i class="icon ion-ios-cloud-download" ></i>
+                            {{link.libl}}
+                        </button>
+                    <p>
+                </div>
+            </div>
+        </ion-list>
+    </ion-content>
+</ion-view>

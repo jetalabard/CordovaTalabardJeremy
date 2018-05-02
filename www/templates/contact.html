@@ -1,0 +1,32 @@
+<ion-view view-title="Contact"  ng-controller="TabsPageCtrl" ng-init="getDescription();" class="fond" >
+	<ion-content class="has-header">
+		<div class="button-bar">
+			<a class="button" href="mailto:{{description.email}}">
+				<i class="icon ion-email"></i>
+				{{description.email}}
+			</a>
+        </div>
+       <div class="button-bar">
+			<a class="button" href="tel:{{description.tel}}">
+				<i class="icon ion-ios-telephone"></i>
+                {{description.tel}}
+			</a>
+        </div>
+		<div class="button-bar" ng-click='goLink(description.faceBookLink);'>
+			<a class="button">
+				<i class="icon ion-social-facebook big-icon"></i>
+			</a>
+			<a class="button" ng-click='goLink(description.linkedinLink);'>
+				<i class="icon ion-social-linkedin big-icon"></i>
+			</a>
+		</div>
+		<div class="button-bar">
+			<a class="button" href="geo:45.7641125,3.1154926">
+				<i class="icon ion-map"></i>
+                {{description.adress}}
+			</a>
+        </div>
+		
+		
+    </ion-content>        
+</ion-view>

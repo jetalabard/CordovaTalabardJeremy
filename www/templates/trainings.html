@@ -1,0 +1,26 @@
+<ion-view view-title="Formations" class="fond" >
+    <ion-content class="has-header" >
+        <ion-list ng-controller="TrainingCtrl" ng-init="getTrainings();">
+            <div class="card" ng-repeat="training in trainings" >
+                <div class="item item-divider">
+                    <h2>{{training.title}}</h2>
+                    <h3>{{training.subtitle}}</h3>
+                    <p>{{training.date}}</p>
+                </div>
+                <div class="item item-text-wrap" style="text-align: center;">
+                    <img ng-src="{{training.photo}}" style="width:100%"/>
+                    <p style="text-align: justify;text-justify: inter-word;">
+                        {{training.resume}}
+                    </p>
+                    <br>
+                    <p>
+                        <button class="button button-energized" ng-repeat="link in training.links" style="margin: 10px;" ng-click="clickButton(link);" >
+                            <i class="icon ion-ios-cloud-download" ></i>
+                            {{link.libl}}
+                        </button>
+                    <p>
+                </div>
+            </div>
+        </ion-list>
+    </ion-content>
+</ion-view>

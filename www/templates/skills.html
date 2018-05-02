@@ -1,0 +1,28 @@
+<ion-view view-title="Compétences Informatiques" class="fond" >
+    <ion-content class="has-header" ng-controller="SkillCtrl" ng-init="getSkills();">
+		  <br><br>
+		  <div class="card" >
+                <div class="item item-divider">
+                    <i class="ion-images"></i>
+					Langages et Framework
+                </div>
+				<p>
+					<img ng-repeat="language in skills" ng-src="{{language.image}}" ng-if="language.type == 'language' " class="image-list-thumb"/>
+				</p>	
+			</div>
+			
+			<br><br>
+			
+			<div class="card" >
+                <div class="item item-divider">
+                    <i class="ion-images"></i>
+					Méthodologie et outils
+                </div>
+				<p>
+					<img ng-repeat="tool in skills" ng-src="{{tool.image}}" ng-if="tool.type == 'tool' " class="image-list-thumb"/>
+				</p>	
+			</div>
+		<br><br>
+                    
+	  </ion-content>
+</ion-view>
